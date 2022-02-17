@@ -1,0 +1,45 @@
+<html>
+<body bgcolor="pink">
+<h1> <center>HI  I AM A TRAINEE </center></h1>
+<form>
+<table>
+<tr>
+<td>
+TRAINEE NAME:
+</td>
+<td>
+<input type="text" onkeyup="alphabet(this)" required>
+</td>
+</tr>
+<tr>
+<td>
+AGE:
+</td>
+<td>
+<input type="number" min="20">
+</td>
+</tr>
+<tr>
+<td>
+NAME OF THE DEGREE:
+</td>
+<td>
+<input type="text" onkeyup="alphabet(this)" required>
+</td>
+</tr>
+<tr>
+<td>
+<input type="Submit">
+</td>
+</tr>
+</table>
+</form>
+<script>
+function alphabet(input)
+{
+let regex=/[^a-z]/gi;
+input.value=input.value.replace(regex,"");
+}
+</script>
+</body>
+</html>

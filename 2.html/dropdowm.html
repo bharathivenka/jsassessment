@@ -1,0 +1,23 @@
+ <html>
+ <head> <title> CREATE AND DROPDOWN AND SWITCH PAGES </title> </head>
+ <body bgcolor="orange">
+ <h1> <center>CHOOSE BETWEEN TRAINER AND TRAINEE </center></h1>
+ <select id="choose">
+ <option disabled selected>CHOOSE </option>
+ <option value="trainer"> Trainer </option>
+ <option value="trainee"> Trainee </option>
+ </select>
+ <input type="submit" onClick="change()">
+
+ 
+ <script>
+ function change() {
+  let sel = document.getElementById('choose');
+
+  let option = sel.options[sel.selectedIndex].value;
+
+  window.open(option + ".html");
+}
+ </script>
+</body>
+</html>
