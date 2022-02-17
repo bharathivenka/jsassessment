@@ -1,0 +1,125 @@
+<html>
+<head>
+<title> FORM CREATION AND ALTERING FOCUS </title>
+<center> <h1> <b> FORM </b> </h1> </center>
+<script>
+function myFunction() {
+  document.getElementById("gender").focus();
+  }
+</script>
+</head>
+<body bgcolor="lightblue">
+<form>
+<table>
+<tr>
+<td>
+ <h2> FIRST NAME: </h2>
+</td>
+<td>
+<h2><input type="text" onblur="myFunction()" onkeyup="alphabet(this)" required></h2>
+</td>
+</tr>
+<tr>
+<td>
+<h2>LAST NAME:</h2>
+</td>
+<td>
+<h2><input type="text" onkeyup="alphabet(this)" ></h2>
+</td>
+</tr>
+<tr>
+<td>
+<h2>DATE OF BIRTH:</h2>
+</td>
+<td>
+<h2><input type="date"></h2>
+</td>
+</tr>
+<tr>
+<td>
+<h2>AGE:</h2>
+</td>
+<td>
+<h2><input type="number" min="0"></h2>
+</td>
+</tr>
+<tr>
+<td>
+<h2>GENDER:</h2>
+</td>
+<td>
+<h2><select id="gender">
+<option value="male"> MALE </option>
+<option value="female"> FEMALE</option>
+<option value="other"> OTHER </option>
+</select></h2>
+</td>
+</tr>
+<tr>
+<td>
+<h2>EMAIL:</h2>
+</td>
+<td>
+<h2><input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></h2>
+</td>
+</tr>
+<tr>
+<td>
+<h2>PHONE NUMBER:</h2>
+</td>
+<td>
+<h2><input type="text"  pattern="[0-9]{10}"  onkeyup="numberOnly(this)" maxLength="10"></h2>
+</td>
+</tr>
+<tr>
+<td>
+<h2>AADHAR NO:</h2>
+</td>
+<td>
+<h2><input type="text"  onkeyup="numberOnly(this)" maxLength="12"></h2>
+</td>
+</tr>
+<tr>
+<td>
+<h2>PAN CARD NO:</h2>
+</td>
+<td>
+<h2><input type="text" pattern="[a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}" onkeyup="alphanumer(this)" maxLength="10"></h2>
+</td>
+</tr>
+<tr>
+<td>
+<h2>ADDRESS:</h2>
+</td>
+<td>
+<h2><input type="text"></h2>
+</td>
+</tr>
+<tr>
+<td>
+<input type="Submit">
+<input type="Reset">
+</td>
+</tr>
+</table>
+</form>
+<script>
+function numberOnly(input)
+{
+let regex=/[^0-9]/g;
+input.value=input.value.replace(regex,"");
+}
+function alphanumer(input)
+{
+let regex=/[^(a-z) ^(0-9)]/gi;
+input.value=input.value.replace(regex,"");
+}
+function alphabet(input)
+{
+let regex=/[^a-z]/gi;
+input.value=input.value.replace(regex,"");
+}
+</script>
+</body>
+</html
+
