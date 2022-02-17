@@ -1,0 +1,54 @@
+<html>
+<head>
+<title> WINDOW RELOAD </title>
+<center><h1>RELOADING WEBPAGE </h1></center>
+</head>
+<body bgcolor="lightblue">
+<form>
+<table>
+<tr>
+<td>
+NAME:
+</td>
+<td>
+<input type="text" onkeyup="alphabet(this)" required>
+</td>
+</tr>
+<tr>
+<td>
+FATHER NAME:
+</td>
+<td>
+<input type="text" onkeyup="alphabet(this)">
+</td>
+</tr>
+<tr>
+<td>
+AGE:
+</td>
+<td>
+<input type="number" min="0" required >
+</td>
+</tr>
+<tr>
+<td>
+<input type="submit">
+</td>
+</tr>
+<tr>
+<td>
+<button onClick="window.location.reload();">Refresh Page</button>
+</td>
+</tr>
+</table>
+</form>
+<script>
+function alphabet(input)
+{
+let regex=/[^a-z]/gi;
+input.value=input.value.replace(regex,"");
+}
+</script>
+</body>
+</html>
+
